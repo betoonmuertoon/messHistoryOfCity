@@ -183,3 +183,48 @@ body {
     cursor: not-allowed;
     opacity: 0.6;
 }
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column; /* Стекируем колонки вертикально */
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 40%; /* Список друзей занимает верхнюю часть */
+        border-right: none;
+        border-bottom: 1px solid #dce1e6;
+    }
+
+    .chat-area {
+        height: 60%; /* Чат занимает нижнюю часть */
+    }
+
+    .my-profile {
+        padding: 10px 20px;
+    }
+
+    .message {
+        max-width: 85%; /* На узком экране даем сообщениям больше места */
+    }
+
+    .section-title {
+        padding: 5px 20px;
+    }
+}
+
+/* Совсем маленькие экраны (телефоны вертикально) */
+@media (max-width: 480px) {
+    .sidebar {
+        height: 30%;
+    }
+    .chat-area {
+        height: 70%;
+    }
+    .info h2 {
+        font-size: 14px;
+    }
+}
